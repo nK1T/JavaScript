@@ -1,0 +1,10 @@
+1. while using <script src = "./xyz.js"></script>  |-->not recommended
+    It will stop the parsing for the whole html code and will start loading that js file first.
+
+2. while using  <script src = "./xyz.js"  async> </script> //using async   |-->not recommended
+    It will not stop the parsing for the html code but simulataneously the js will load together with the parsing. But if the loading of js will be done then the browser will stop the 
+    parsing (evn if the whole html code is not parsed) and immediately start executing that js file.
+
+3. while using  <script src = "./xyz.js"  defer> </script> //using async   |--> recommended
+    It will not stop the parsing for the html code but simulataneously the js will load together with the parsing. If the loading of js will be done then the browser will not stop the 
+    parsing browser will parse the whole html code and after that only it will start the execution of js code. 
